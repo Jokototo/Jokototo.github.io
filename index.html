@@ -6,26 +6,14 @@
       <script type="text/javascript" src="../d3/d3.js"></script>
   </head>
   <body>
-      <script type="text/javascript">
-          var dataset = [ 5, 10, 15, 20, 25 ];
-		  <div style="display: inline-block;
-            width: 20px;
-            height: 75px;
-            background-color: teal;"></div>
-			
-			div.bar {
-				display: inline-block;
-				width: 20px;
-				height: 75px;   /* We'll override height later */
-				background-color: teal;
-			}
-			<div class="bar"></div>
-		  
-		  
-		  
-		  
-		  
-		  
+      <script type="text/javascript">			
+       var dataset = [ 5, 10, 15, 20, 25 ];
+
+		d3.select("body").selectAll("div")
+			.data(dataset)
+			.enter()
+			.append("div")
+			.attr("class", "bar");
       </script>
   </body>
 </html>
